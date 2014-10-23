@@ -6,7 +6,7 @@ Little script to scaffold a plugin directoy to write vim plugins with lua.j
 Installation
 ------------
 
-``curl https://github.com/scusy/create-vimplugins-with-lua/blob/master/setup.lua | lua``
+``curl https://raw.githubusercontent.com/scusy/create-vimplugins-with-lua/master/setup.lua | lua``
 
 License
 -------
