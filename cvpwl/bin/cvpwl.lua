@@ -1,0 +1,45 @@
+#!/usr/bin/env lua
+function color(c)
+    if     c == "b" then io.write('\27[34m')
+    elseif c == "w" then io.write('\27[37m')
+    elseif c == "p" then io.write('\27[35m')
+    elseif c == "r" then io.write('\27[31m')
+    elseif c == "y" then io.write('\27[33m')
+    elseif c == "g" then io.write('\27[32m')
+    end
+end
+local pluginname, ftpplugin, luasupport,pluginpath
+io.write("Welcome to ")
+color("y")
+io.write("cvpwl")
+color("w")
+print("!")
+print("Please enter some config stuff first")
+color("g")
+io.write("Pluginname: ")
+color("w")
+pluginname= io.read()
+color("g")
+io.write("Path(~/.vim/bundle/): ")
+color("w")
+pluginpath= io.read()
+if pluginpath=="" then
+    pluginpath='~/.vim/bundle/'
+end
+color("g")
+
+io.write("ftpplugin?(Y/n): ")
+color("w")
+ftpplugin=io.read()
+color("g")
+io.write("luasupport?(Y/n): ")
+color("w")
+ftpplugin=io.read()
+color("w")
+io.write("Your plugin was created in ") 
+color("b")
+print(pluginpath..pluginname)
+color("w")
+print("Happy coding!")
+os.execute("mkdir -p "..pluginpath..pluginname)
+os.execute("cp -r ~/.cvpwl/templates/* "..pluginpath..pluginname)
